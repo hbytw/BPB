@@ -2026,7 +2026,7 @@ const renderHomePage = async (env, hostName, fragConfigs) => {
 	<body>
 		<h1>BPB Panel <span style="font-size: smaller;">${panelVersion}</span> 💦</h1>
 		<div class="form-container">
-            <h2>FRAGMENT SETTINGS ⚙️</h2>
+            <h2>功能设置 ⚙️</h2>
 			<form id="configForm">
 				<div class="form-control">
 					<label for="remoteDNS">🌏 Remote DNS</label>
@@ -2060,50 +2060,50 @@ const renderHomePage = async (env, hostName, fragConfigs) => {
 					<label for="outProxy">✈️ Chain Proxy</label>
 					<input type="text" id="outProxy" name="outProxy" value="${outProxy}">
 				</div>
-                <h2>FRAGMENT ROUTING ⚙️</h2>
+                <h2>附加功能 ⚙️</h2>
 				<div class="form-control" style="margin-bottom: 20px;">			
                     <div class="routing">
                         <input type="checkbox" id="block-ads" name="block-ads" style="margin: 0; grid-column: 2;" value="true" ${blockAds ? 'checked' : ''}>
-                        <label for="block-ads">Block Ads.</label>
+                        <label for="block-ads">屏蔽广告</label>
                     </div>
                     <div class="routing">
 						<input type="checkbox" id="bypass-iran" name="bypass-iran" style="margin: 0; grid-column: 2;" value="true" ${bypassIran ? 'checked' : ''}>
-                        <label for="bypass-iran">Bypass Iran</label>
+                        <label for="bypass-iran">绕过伊朗</label>
 					</div>
                     <div class="routing">
 						<input type="checkbox" id="block-porn" name="block-porn" style="margin: 0; grid-column: 2;" value="true" ${blockPorn ? 'checked' : ''}>
-                        <label for="block-porn">Block Porn</label>
+                        <label for="block-porn">屏蔽色情内容</label>
 					</div>
                     <div class="routing">
 						<input type="checkbox" id="bypass-lan" name="bypass-lan" style="margin: 0; grid-column: 2;" value="true" ${bypassLAN ? 'checked' : ''}>
-                        <label for="bypass-lan">Bypass LAN</label>
+                        <label for="bypass-lan">绕过局域网</label>
 					</div>
 				</div>
-                <h2>PROXY IP ⚙️</h2>
+                <h2>代理 IP ⚙️</h2>
 				<div class="form-control">
 					<label for="proxyIP">📍 IP or Domain</label>
 					<input type="text" id="proxyIP" name="proxyIP" value="${proxyIP}">
 				</div>
-                <h2>CLEAN IP ⚙️</h2>
+                <h2>清洁 IP ⚙️</h2>
 				<div class="form-control">
 					<label for="cleanIPs">✨ Clean IPs</label>
 					<input type="text" id="cleanIPs" name="cleanIPs" value="${cleanIPs.replaceAll(",", " , ")}">
 				</div>
                 <div class="form-control">
-                    <label>🔎 Online Scanner</label>
+                    <label>🔎 在线扫描</label>
                     <a href="https://scanner.github1.cloud/" id="scanner" name="scanner" target="_blank">
                         <button type="button" class="button">
-                            Scan now
+                            开始扫描
                             <span class="material-symbols-outlined" style="margin-left: 5px;">open_in_new</span>
                         </button>
                     </a>
                 </div>
-                <h2>PORTS ⚙️</h2>
+                <h2>端口设置 ⚙️</h2>
                 <div class="table-container">
                     <table id="frag-sub-table">
                         <tr>
-                            <th style="text-wrap: nowrap; background-color: gray;">Config type</th>
-                            <th style="text-wrap: nowrap; background-color: gray;">Ports</th>
+                            <th style="text-wrap: nowrap; background-color: gray;">配置类型</th>
+                            <th style="text-wrap: nowrap; background-color: gray;">端口</th>
                         </tr>
                         <tr>
                             <td style="text-align: center; font-size: larger;"><b>TLS</b></td>
@@ -2115,7 +2115,7 @@ const renderHomePage = async (env, hostName, fragConfigs) => {
                         </tr>`}        
                     </table>
                 </div>
-                <h2>WARP ENDPOINTS ⚙️</h2>
+                <h2>WARP 端点 ⚙️</h2>
 				<div class="form-control">
                     <label for="wowEndpoint">✨ WoW Endpoints</label>
                     <input type="text" id="wowEndpoint" name="wowEndpoint" value="${wowEndpoint.replaceAll(",", " , ")}" required>
@@ -2125,14 +2125,14 @@ const renderHomePage = async (env, hostName, fragConfigs) => {
                     <input type="text" id="warpEndpoints" name="warpEndpoints" value="${warpEndpoints.replaceAll(",", " , ")}" required>
 				</div>
                 <div class="form-control">
-                    <label>🔎 Scanner Script</label>
+                    <label>🔎 脚本扫描</label>
                     <button type="button" class="button" style="padding: 10px 0;" onclick="copyToClipboard('bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/warp/main/endip/install.sh)', false)">
-                        Copy Script<span class="material-symbols-outlined">terminal</span>
+                        拷贝脚本<span class="material-symbols-outlined">terminal</span>
                     </button>
                 </div>
 				<div id="apply" class="form-control">
 					<div style="grid-column: 2; width: 100%;">
-						<input type="submit" id="applyButton" class="button disabled" value="APPLY SETTINGS 💥" form="configForm">
+						<input type="submit" id="applyButton" class="button disabled" value="应用设置 💥" form="configForm">
 					</div>
 				</div>
 			</form>
